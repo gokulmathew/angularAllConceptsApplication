@@ -12,13 +12,11 @@ import { UserDataService } from './services/user-data.service';
     AppComponent,
     //You have to mention the new component created here
     BasePageComponent
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BasePageModule,
-
+    BasePageModule
   ],
   providers: [
     UserDataService
