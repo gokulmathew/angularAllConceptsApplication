@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { CANCELLED } from 'node:dns';
 
 @Injectable({
   providedIn: 'root'
@@ -11,16 +10,16 @@ export class UserDataService {
    public userDetails$:Observable<any> = new Observable();
 
   constructor(private httpClient:HttpClient) { 
-    //Initially when service is CANCELLED, the below func is called and APi call is made
+    //Initially when service is called, the below func is called and APi call is made
     this.getUserData();
   }
 
+  // Info: when this function is called, the data stored in userDetails will be sent 
   getUserDetails(){
     return this.userDetails$;
   }
 
-
-  //   Wokring Solution:
+//   Wokring Solution:
 //   public getUserData(){
 //     return this.httpClient.get('https://jsonplaceholder.typicode.com/posts')
 //  }

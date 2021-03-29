@@ -5,8 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  declarations: [  ],
+  declarations: [BasePageComponent  ],
   exports:[
+    
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { callbackify } from 'node:util';
 import { UserDataService } from '../../services/user-data.service';
 
 @Component({
@@ -23,14 +22,14 @@ export class BasePageComponent implements OnInit {
   //    console.log('APIData',this.apiData)
   //  });
 
- // Note:
+ // Info:
       // * As data member is public, I called it directly
       //  *The below approach is used, when two pages uses the same APi call, the APi call data can
       //  be used in second function also
       // * WHen APi call is made, all the page which uses this data member, will be updated   
     this.userDataService.userDetails$.subscribe(data=>this.apiData = data)
 
-  // this.userDataService.getUserDetails().subscribe(data=>this.apiData=data)
+
 
 //  By promise method => not working
   // this.userDataService && this.userDataService.getUserData() && this.userDataService.getUserData().then((res:any) => {
@@ -38,13 +37,6 @@ export class BasePageComponent implements OnInit {
   //   console.log('APIData',this.apiData)
   // }
   // );
-
-    //  const APIData :any =  this.userDataService.getUserData();
-
-  //  console.log('APIData',this.apiData)
-
-  // const APIData :any=  
-
 
   }
 

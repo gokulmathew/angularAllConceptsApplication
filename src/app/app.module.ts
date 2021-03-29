@@ -10,6 +10,8 @@ import { UserDataService } from './services/user-data.service';
 @NgModule({
   declarations: [
     AppComponent,
+    //You have to mention the new component created here
+    BasePageComponent
 
   ],
   imports: [
@@ -21,7 +23,7 @@ import { UserDataService } from './services/user-data.service';
   providers: [
     UserDataService
   ],
-  // bootstrap: [AppComponent]
-  bootstrap: [BasePageComponent]
+  bootstrap: [AppComponent]
+  // bootstrap: [BasePageComponent]
 })
 export class AppModule { }
