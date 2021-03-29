@@ -3,16 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BasePageComponent } from './modules/base-page/base-page.component';
+import { BasePageModule } from './modules/base-page/base-page.module';
+import { UserDataService } from './services/user-data.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BasePageModule,
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    UserDataService
+  ],
+  // bootstrap: [AppComponent]
+  bootstrap: [BasePageComponent]
 })
 export class AppModule { }
