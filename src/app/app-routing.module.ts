@@ -7,7 +7,14 @@ import {PageNotFoundComponent} from './Pages/page-not-found/page-not-found.compo
 const routes: Routes = [
   {path:'',component:BasePageComponent},
   // pathMatch: 'full' is like haveing exact={true} in react. Its better to have it everywhere
-  {path:'secondpage',component:SecondPageComponent, pathMatch: 'full' },
+  // {path:'secondpage',component:SecondPageComponent ,pathMatch: 'full' },
+
+// Info: Lazy loading for second page module
+  {path:'secondpage',
+  loadChildren: () =>
+    import('./modules/second-page/second-page.module').then((m)=> m.SecondPageModule)
+},
+
   // Info: Displaying Page not found comp
   { path: '**',   component: PageNotFoundComponent }
 ];

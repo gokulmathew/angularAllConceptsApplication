@@ -19,7 +19,8 @@ import { UserDataService } from './services/user-data.service';
     BrowserModule,
     AppRoutingModule,
     BasePageModule,
-    SecondPageModule
+    // No need to mention second module, becoz it is lazy loaded
+    // SecondPageModule
   ],
   providers: [
     UserDataService
