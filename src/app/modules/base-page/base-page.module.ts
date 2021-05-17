@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [BasePageComponent  ],
+  declarations: [BasePageComponent],
   exports:[
     
   ],

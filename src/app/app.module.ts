@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BasePageModule } from './modules/base-page/base-page.module';
 import { SecondPageModule } from './modules/second-page/second-page.module';
 import { UserDataService } from './services/user-data.service';
 
+
 @NgModule({
+  // Info: Import new components under declarations
   declarations: [
-    AppComponent
+    AppComponent,
+    routingComponents
   ],
+    // Info: Import new modules under imports
   imports: [
     BrowserModule,
     AppRoutingModule,
