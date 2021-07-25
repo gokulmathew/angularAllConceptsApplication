@@ -15,7 +15,8 @@ const routes: Routes = [
     import('./modules/second-page/second-page.module').then((m)=> m.SecondPageModule)
 },
 
-  // Info: Displaying Page not found comp
+  // Info: Displaying Page not found comp. This will be called when invalid data given or none of the above 
+          //  path matches
   { path: '**',   component: PageNotFoundComponent }
 ];
 
